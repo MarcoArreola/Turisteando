@@ -1,0 +1,316 @@
+<style>
+#Center{
+  width: 800px;
+  height: 800px;
+}
+#main{
+    left: 25%;
+    width: 700px;
+    height: 700px;
+    border: 0.1px solid black;
+    position: absolute;
+    background-image: url("Tablero.PNG");
+    background-size: cover;
+    margin: 0 auto;
+  }
+  .corner {
+    width: 122px; /*98*/
+    height: 122px;
+    border: 0.1px solid black;
+    position: absolute;
+  }
+
+  #B1 {
+    bottom: 0;
+    right: 0;
+    background-image: url("./assets/B1.png");
+    background-size: auto;
+  }
+
+  #B9 {
+    bottom: 0;
+    left: 0;
+  }
+
+  #B17 {
+    top: 0;
+    left: 0;
+  }
+
+  #B25 {
+    top: 0;
+    right: 0;
+  }
+
+  #center-square {
+    position: absolute;
+    width: 450px;/*498*/
+    height: 450px;
+    top: 124px; /*100*/
+    left: 124px;
+    border: 0.1px solid black;
+    background-image: url("./assets/Center.png");
+  }
+
+  #C1 {
+    
+    position: absolute;
+    border: 0.1px solid black;
+    width: 451px;
+    height: 122px;
+    left: 124px;
+    bottom:0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content:flex-end;
+    align-items:stretch;
+    
+  
+  }
+  #C2 {
+    position: absolute;
+    border: 0.1px solid black;
+    width: 122px;/*98*/
+    height: 452px;/*498*/
+    top: 124px;/*100*/
+    left: 0;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    align-items: stretch;
+    
+  }
+  #C3 {
+    position: absolute;
+    border: 0.1px solid black;
+    width: 450px;/*498*/
+    height: 122px;/*98*/
+    top: 0;
+    left: 124px; /*100*/
+    display: flex;
+    justify-content:space-between;
+    align-items:stretch;
+   
+  }
+  #C4 {
+    position: absolute;
+    border: 0.1px solid black;
+    width: 122px;
+    height: 452px;
+    top: 124px;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items:stretch;
+  }
+  
+.blocks_1 {
+    width: calc(100% / 7);
+    height: 100%;
+    background-color: #fff;
+    border: 0.1px solid black;
+}
+
+.blocks_2 {
+    width:  100%;
+    height: calc(452 / 7);
+    background-color: #fff;
+    border: 0.1px solid black;
+}
+
+.blocks_3 {
+    width: calc(100% / 7);
+    height: 100%;
+    background-color: #fff;
+    border: 0.1px solid black;
+}
+
+.blocks_4 {
+    width:  100%;
+    height: calc(452 / 7);
+    background-color: #fff;
+    border: 0.1px solid black;
+}
+
+#B2{
+  background-image: url("./assets/B2.png");
+  background-size: auto;
+}
+#B3{
+  background-image: url("./assets/B3.png");
+  background-size: auto;
+}
+#B4{
+  background-image: url("./assets/B4.png");
+  background-size: auto;
+}
+#B5{
+  background-image: url("./assets/B5.png");
+  background-size: auto;
+}
+#B6{
+  background-image: url("./assets/B6.png");
+  background-size: auto;
+}
+#B7{
+  background-image: url("./assets/B7.png");
+  background-size: auto;
+}
+#B8{
+  background-image: url("./assets/B8.png");
+  background-size: auto;
+}
+#B9{
+  background-image: url("./assets/B9.png");
+  background-size: auto;
+}
+#B10{
+  background-image: url("./assets/B10.png");
+  background-size: auto;
+  
+}
+#B11{
+  background-image: url("./assets/B11.png");
+  background-size: auto;
+}
+#B12{
+  background-image: url("./assets/B12.png");
+  background-size: auto;
+}
+#B13{
+  background-image: url("./assets/B13.png");
+  background-size: auto;
+}
+#B14{
+  background-image: url("./assets/B14.png");
+  background-size: auto;
+}
+#B15{
+  background-image: url("./assets/B15.png");
+  background-size: auto;
+}
+#B16{
+  background-image: url("./assets/B16.png");
+  background-size: auto;
+}
+#B17{
+  background-image: url("./assets/B17.png");
+  background-size: auto;
+}
+#B18{
+  background-image: url("./assets/B18.png");
+  background-size: auto;
+}
+#B19{
+  background-image: url("./assets/B19.png");
+  background-size: auto;
+}
+#B20{
+  background-image: url("./assets/B20.png");
+  background-size: auto;
+}
+#B21{
+  background-image: url("./assets/B21.png");
+  background-size: auto;
+}
+#B22{
+  background-image: url("./assets/B22.png");
+  background-size: auto;
+}
+#B23{
+  background-image: url("./assets/B23.png");
+  background-size: auto;
+}
+#B24{
+  background-image: url("./assets/B24.png");
+  background-size: auto;
+}
+#B25{
+  background-image: url("./assets/B25.png");
+  background-size: auto;
+}
+#B26{
+  background-image: url("./assets/B26.png");
+  background-size: auto;
+}
+#B27{
+  background-image: url("./assets/B27.png");
+  background-size: auto;
+}
+#B28{
+  background-image: url("./assets/B28.png");
+  background-size: auto;
+}
+#B29{
+  background-image: url("./assets/B29.png");
+  background-size: auto;
+}
+#B30{
+  background-image: url("./assets/B30.png");
+  background-size: auto;
+}
+#B31{
+  background-image: url("./assets/B31.png");
+  background-size: auto;
+}
+#B32{
+  background-image: url("./assets/B32.png");
+  background-size: auto;
+}
+
+
+</style>
+
+<!-- Toolbar -->
+<body>
+
+    <div id="main">
+      <div class="corner" id="B1"></div>
+      <div class="corner" id="B9"></div>
+      <div class="corner" id="B17"></div>
+      <div class="corner" id="B25"></div>
+
+      <div id="center-square"></div>
+      <div class="G-1" id="C1">
+        <div id="B2" class="blocks_1"></div>
+        <div id="B3" class="blocks_1"></div>
+        <div id="B4" class="blocks_1"></div>
+        <div id="B5" class="blocks_1"></div>
+        <div id="B6" class="blocks_1"></div>
+        <div id="B7" class="blocks_1"></div>
+        <div id="B8" class="blocks_1"></div>
+      </div>
+      <div class="G-2" id="C2">
+        <div id="B10" class="blocks_2"></div>
+        <div id="B11" class="blocks_2"></div>
+        <div id="B12" class="blocks_2"></div>
+        <div id="B13" class="blocks_2"></div>
+        <div id="B14" class="blocks_2"></div>
+        <div id="B15" class="blocks_2"></div>
+        <div id="B16" class="blocks_2"></div>
+      </div>
+      <div class="G-3" id="C3">
+        <div id="B18" class="blocks_3"></div>
+        <div id="B19" class="blocks_3"></div>
+        <div id="B20" class="blocks_3"></div>
+        <div id="B21" class="blocks_3"></div>
+        <div id="B22" class="blocks_3"></div>
+        <div id="B23" class="blocks_3"></div>
+        <div id="B24" class="blocks_3"></div>
+      </div>
+      <div class="G-4" id="C4">
+        <div id="B26" class="blocks_4"></div>
+        <div id="B27" class="blocks_4"></div>
+        <div id="B28" class="blocks_4"></div>
+        <div id="B29" class="blocks_4"></div>
+        <div id="B30" class="blocks_4"></div>
+        <div id="B31" class="blocks_4"></div>
+        <div id="B32" class="blocks_4"></div>
+      </div>
+    </div>
+    <img src="./assets/B1.png">
+
+  
+</body>
