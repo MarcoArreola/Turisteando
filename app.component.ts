@@ -222,6 +222,37 @@ export class AppComponent {
   }
 
 
+  rollDice() {
+    let dice1Element = document.getElementById('dice1');
+    let dice2Element = document.getElementById('dice2');
+
+    // Generate a random number between 1 and 6
+    let dice1 = Math.floor(Math.random() * 6) + 1;
+    let dice2 = Math.floor(Math.random() * 6) + 1;
+
+    // Update the dice values
+    if(dice1Element != null && dice2Element != null){
+      dice1Element.textContent = dice1.toString();
+      dice2Element.textContent = dice2.toString();
+    // Add the animate class to the dice for the animation
+      dice1Element.classList.add('animate');
+      dice2Element.classList.add('animate');
+      this.stopRoll(dice1Element, dice2Element);
+    // Sum
+    let sum = dice1 + dice2;
+    console.log(sum);
+    }
+  }
+
+  stopRoll(d1: HTMLElement, d2: HTMLElement){
+    d1.addEventListener('animationend', () => {
+      d1.classList.remove('animate');
+    });
+    d2.addEventListener('animationend', () => {
+      d2.classList.remove('animate');
+    });
+  }
+
 }
 
 /*ng generate component xyz

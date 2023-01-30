@@ -7,7 +7,7 @@
     left: 25%;
     width: 700px;
     height: 700px;
-    border: 0.1px solid black;
+    
     position: absolute;
     background-image: url("Tablero.PNG");
     background-size: cover;
@@ -16,7 +16,7 @@
   .corner {
     width: 122px; /*98*/
     height: 122px;
-    border: 0.1px solid black;
+    
     position: absolute;
   }
 
@@ -48,14 +48,14 @@
     height: 450px;
     top: 124px; /*100*/
     left: 124px;
-    border: 0.1px solid black;
+    
     background-image: url("./assets/Center.png");
   }
 
   #C1 {
     
     position: absolute;
-    border: 0.1px solid black;
+    
     width: 451px;
     height: 122px;
     left: 124px;
@@ -69,7 +69,7 @@
   }
   #C2 {
     position: absolute;
-    border: 0.1px solid black;
+    
     width: 122px;/*98*/
     height: 452px;/*498*/
     top: 124px;/*100*/
@@ -82,7 +82,7 @@
   }
   #C3 {
     position: absolute;
-    border: 0.1px solid black;
+    
     width: 450px;/*498*/
     height: 122px;/*98*/
     top: 0;
@@ -94,7 +94,7 @@
   }
   #C4 {
     position: absolute;
-    border: 0.1px solid black;
+    
     width: 122px;
     height: 452px;
     top: 124px;
@@ -110,28 +110,28 @@
     width: calc(100% / 7);
     height: 100%;
     background-color: #fff;
-    border: 0.1px solid black;
+    
 }
 
 .blocks_2 {
     width:  100%;
     height: calc(452 / 7);
     background-color: #fff;
-    border: 0.1px solid black;
+    
 }
 
 .blocks_3 {
     width: calc(100% / 7);
     height: 100%;
     background-color: #fff;
-    border: 0.1px solid black;
+    
 }
 
 .blocks_4 {
     width:  100%;
     height: calc(452 / 7);
     background-color: #fff;
-    border: 0.1px solid black;
+    
 }
 
 #B2{
@@ -260,6 +260,52 @@
   background-size: auto;
 }
 
+/* DICE ROLL */
+.dice {
+  background: white;
+  border: 1px solid #333;
+  font-size: 70px;
+  font-weight: bold;
+  line-height: 100px;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+#dice-container.pointer{
+  cursor: pointer;
+}
+#dice-contanier:hover{
+  cursor: pointer;
+
+}
+.dice.animate {
+  transform: rotateY(360deg);
+}
+
+.dice {
+  margin: 10px;  /* adjust the spacing between the dice */
+}
+
+
+#dice-container {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+#dice-container{
+  position: absolute;  /* position the element absolutely */
+  top: 620px;  /* position the element vertically centered */
+  right: -60px;  /* position the element horizontally centered */
+  transform: translate(-50%, -50%);  /* adjust the position to account for the element's size */
+}
+
+
 
 </style>
 
@@ -310,7 +356,12 @@
         <div id="B32" class="blocks_4"></div>
       </div>
     </div>
-    <img src="./assets/B1.png">
+    
+    <div id="dice-container" class="pointer" (click)="rollDice()">
+      <div id="dice1" class="dice">0</div>
+      <div id="dice2" class="dice">0</div>
+    </div>
+    
 
   
 </body>
