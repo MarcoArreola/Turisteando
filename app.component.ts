@@ -221,8 +221,33 @@ export class AppComponent {
       property.owner = 0;
   }
 
+  rollDice() {
+    const dice = [...document.querySelectorAll(".die-list")];
+    const numbers: number [] = [];
+    dice.forEach(die => {
+      this.toggleClasses(die);
+      die = die as HTMLElement;
+      if( die instanceof HTMLElement){
+        let number = this.getRandomNumber(1,6).toString();
+        die.dataset['roll'] = number;
+        numbers[numbers.length] = Number(number);
+      }
+    });
+    console.log(numbers);
+  }
 
-}
+  toggleClasses(die: any) {
+    die.classList.toggle("odd-roll");
+    die.classList.toggle("even-roll");
+  }
+
+  getRandomNumber(min: number, max: number) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  }
 
 /*ng generate component xyz
 ng add @angular/material
