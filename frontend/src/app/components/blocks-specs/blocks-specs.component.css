@@ -1,0 +1,30 @@
+
+#block{
+    position: absolute;
+}
+
+#btn{
+    position: absolute;
+    right: 0;
+}
+
+.button{
+    background-color: red;
+    color: white;
+    border: 1px solid red;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: black;
+    border: 1px solid black;
+}
+
+#container{
+    position: fixed;
+    width: 300px;
+    height: 400px;
+    border: 3px solid black;
+    right: 2%;
+    top: 10%;
+}
