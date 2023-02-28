@@ -1,0 +1,66 @@
+<div class="row">
+    <div class="col-md-6 parte1">
+      <div class="encabezado">
+        <img class="iconohome" src="../assets/iconohome.png" alt="ll">
+        <p id="NuevoJuego">Nuevo Juego</p>
+      </div>
+  
+      <div class="formulario">
+        <div class="mb-3">
+          <label class="form-label">Sala</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Código</label>
+          <input type="number" class="form-control" [disabled]="!privado">
+          <label><input type="checkbox" id="cbox1" value="first_checkbox" [(ngModel)]="privado"> ¿Es privada?</label><br>
+        </div>
+        <div class="mt-2">
+          <label for="rangeMoney" class="form-label">Money</label>
+          <input type="range" class="form-range" id="rangeMoney" min="0" [max]="MAX_MONEY" [(ngModel)]="money">
+          <small class="text-end">{{money.toLocaleString('es-MX', {style: 'currency', currency: 'MXN'})}}</small>
+        </div>
+  
+        <div class="mb-3">
+          <label class="form-label">Peón</label>
+        </div>
+      </div>
+  
+      <div class="fichas">
+          <img class="imgficha" src="{{item.imagen}}" *ngFor="let item of peonList">
+  
+      </div>
+      <button class="btn btn-pink" (click)="startGame()">Crear</button>
+    </div>
+    <div class="col-md-6 parte2 ">
+      <p id="Unirse">Unirse</p>
+  
+      <div class="table-responsive">
+        <table class="table  table-hover " id="tabla">
+          <thead>
+          <tr>
+            <th>Sala</th>
+            <th>#</th>
+  
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>hodddddddddd</td>
+            <td>hola</td>
+            <td>
+              <button class="btn btn-danger">Join</button>
+            </td>
+            <td>
+              <button class="btn btn-danger">Update</button>
+            </td>
+          </tr>
+          </tbody>
+  
+        </table>
+  
+      </div>
+      <button class="btn btn-pink">Unirse</button>
+    </div>
+  
+  </div>

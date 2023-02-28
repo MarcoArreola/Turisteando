@@ -1,0 +1,14 @@
+<p>room works!</p>
+<app-dice></app-dice>
+<app-table [imageId]="id" (newId)="id = $event"></app-table>
+
+<ng-template [ngIf]="id != '0'">
+    <app-blocks-specs [imageId]="id" (newId)="id = $event"></app-blocks-specs>
+</ng-template>
+
+<ul>
+    <li *ngFor="let player of players">
+        {{player.name | json}}
+    </li>
+</ul>
+
