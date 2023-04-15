@@ -1,0 +1,106 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(2, 0fr);
+}
+
+.paja{
+    background-color: #FFFCEC;
+    height: 97.5vh;
+  }
+
+  h1{
+    margin-left:  130px;
+    margin-top: 12px;
+    font-family: TommyBold;
+    font-size: 35px;
+    color: white;
+  }
+
+  .sombrero{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin-left: 80px;
+    margin-top: 15px;
+}
+
+.btn{
+    margin-top: -26px;
+  }
+  
+  .btn:hover{
+    cursor: pointer;
+    opacity: 60%;
+  }
+  
+  
+  .iconohome{
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      margin-left: 1460px;
+      margin-top: -50px;
+  }
+  
+    .titulo{
+      background-color: #F50087;
+      width: 100%;
+      height: 70px;
+    }
+  
+    @font-face {
+      font-family: Mexicana;
+      src: url(src\fuentes\AmbystomaMexicanum.otf);
+    }
+  
+    @font-face {
+      font-family: TommyBold;
+      src: url(src\fuentes\TommyBold.otf);
+    }
+  
+    @font-face {
+      font-family: TommyLight;
+      src: url(src\fuentes\TommyLight.otf);
+    }
+  
+    @font-face {
+      font-family: TommyRegular;
+      src: url(src\fuentes\TomyRegular.otf);
+    }
+
+    .creditos{
+      background-color: #F50087;
+      width: 100%;
+      height: 20px;
+      text-align: center;
+      margin-bottom: -10px;
+      vertical-align: middle;
+    }
+    .rosa{
+        color: #F50087;
+    }
+    .naranja{
+        color: #ff8000;
+    }
+    .verde{
+        color: #80D447;
+    }
+    .amarillo{
+        color: #FFD940;
+    }
+    .azul{
+        color: #58B9BC;
+    }
+  
+    p{
+      font-family: TommyLight;
+      font-size: 10px;
+      color: white;
+      vertical-align: middle;
+      margin-top: 3px;
+    }
+    .formulario{
+        margin: 10px 93px 10px 69px;
+        font-size: 18px;
+    }
+    

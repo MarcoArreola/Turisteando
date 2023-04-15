@@ -1,0 +1,84 @@
+.formulario{
+    margin: 10px 93px 10px 69px;
+    font-size: 18px;
+}
+
+h1{
+    margin-left: 70px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    font-family: TommyBold;
+    font-size: 30px;
+}
+
+label, input{
+    font-family: TommyRegular;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.paja{
+    background-color: #FFFCEC;
+  }
+
+  .rosa{
+    color: #F50087;
+  }
+  .naranja{
+    color: #ff8000;
+  }
+  .verde{
+    color: #80D447;
+  }
+  .amarillo{
+    color: #FFD940;
+  }
+  .azul{
+    color: #58B9BC;
+  }
+
+  .btn {
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 7px;
+    font-family: TommyBold;
+  }
+  
+  .btn-azul{
+    background-color: #58B9BC !important;
+    border-radius: 55px !important;
+    width: 140px !important;
+    margin-left: 230px;
+    margin-right: 50px;
+    margin-top: 30px;
+  }
+
+  .btn:hover{
+    cursor: pointer;
+    box-shadow: #A6A6A6;
+    opacity: 60%;
+  }
+
+
+@font-face {
+    font-family: Mexicana;
+    src: url(src\fuentes\AmbystomaMexicanum.otf);
+  }
+
+  @font-face {
+    font-family: TommyBold;
+    src: url(src\fuentes\TommyBold.otf);
+  }
+
+  @font-face {
+    font-family: TommyLight;
+    src: url(src\fuentes\TommyLight.otf);
+  }
+
+  @font-face {
+    font-family: TommyRegular;
+    src: url(src\fuentes\TomyRegular.otf);
+  }

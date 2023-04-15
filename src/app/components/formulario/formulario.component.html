@@ -1,0 +1,18 @@
+<h1 id="NuevoJuego" class="azul">Nuevo Juego</h1>
+<div class="formulario">
+   <div class="mb-3">
+     <label class="form-label">Sala:</label>
+     <input type="text" class="form-control" id="name" [(ngModel)]="room.name">
+   </div>
+   <div class="mb-3">
+     <label class="form-label">Código:</label>
+     <input type="String" class="form-control" [disabled]="!room.private" [(ngModel)]="room.password">
+     <label><input type="checkbox" id="cbox1" value="first_checkbox" [(ngModel)]="room.private"> ¿Es privada?</label><br>
+   </div>
+   <div class="mt-2">
+     <label for="rangeMoney" class="form-label">Money:</label>
+     <input type="range" class="form-range" id="rangeMoney" min="500" [max]="MAX_MONEY" [(ngModel)]="room.money" step="500">
+     <small class="text-end">{{room.money.toLocaleString('es-MX', {style: 'currency', currency: 'MXN'})}}</small>
+   </div>
+   <button class="btn btn-azul" (click)="createRoom()">Crear</button>
+</div>

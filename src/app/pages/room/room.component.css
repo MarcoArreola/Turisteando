@@ -1,0 +1,64 @@
+.main{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: #FFFCEC;
+    
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+}
+
+.player{
+    z-index: 1;
+}
+
+.Actions{
+    position: absolute;
+    right: 17%;
+    bottom: 35%;
+}
+
+.endTurn{
+    position: absolute;
+    right: 8%;
+    bottom: 5%;
+}
+
+.Start{
+    position: absolute;
+    bottom:  4%;
+    right: 8%;
+    height: 40px;
+    width: 100px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .pay{
+    background-color: red; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }

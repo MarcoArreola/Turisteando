@@ -1,0 +1,49 @@
+<ng-template>
+    <app-join-room [room]="roomParams"></app-join-room>
+</ng-template>
+<app-join-room [room]="roomParams"></app-join-room>
+<div class="main">
+    
+    <div class="player">
+        <app-player [numbers]="numbers" (player)="actions($event)" [Room]="roomParams">
+            
+        </app-player>
+    </div>
+
+    <div>
+        <app-table [imageId]="imgId" (newId)="selectedBlock($event, avion)" [avion]="avion" [player]="playerTurn" [Bought]="bought" [Properties]="blocks"></app-table>
+    </div>
+
+    <div>
+        <ng-template [ngIf]="imgId != '0'">
+            <div>
+                <app-blocks-specs [imageId]="imgId" (newId)="selectedBlock($event, avion)">
+                </app-blocks-specs>
+            </div>
+            <div class="Actions">
+                <ng-template [ngIf]="available"><button class="button" (click)="buyProperty()">Comprar</button></ng-template>
+                <ng-template [ngIf]="upgrade"><button class="button" (click)="improveProperty()">Mejorar</button></ng-template>
+                <ng-template [ngIf]="decrease"><button class="button" (click)="decreaseProperty()">Decrementar</button></ng-template>
+                <ng-template [ngIf]="sell"><button class="button" (click)="sellProperty()">Vender</button></ng-template>
+                <ng-template [ngIf]="pay"><button class="pay" (click)="payRent()">Pagar</button></ng-template>
+                <ng-template [ngIf]="jail"><button class="pay" (click)="Jail()">Aceptar</button></ng-template>
+            </div>
+        </ng-template>
+        
+        <app-dice  [room]="roomParams" [mePlayer]="mePlayer"></app-dice>
+        <ng-template [ngIf]="started == false">
+            <button class="Start" (click)="startGame()">Start Game</button>
+        </ng-template>
+    </div>
+
+    <div class="endTurn">
+        <ng-template [ngIf]="end && mePlayer != undefined && playerTurn != undefined && mePlayer.id == playerTurn.id">
+            <button class="button" (click)="endTurn()">Terminar turno</button>
+        </ng-template>
+    </div>
+
+</div>
+    
+   
+    
+    

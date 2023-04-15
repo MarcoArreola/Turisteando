@@ -1,0 +1,78 @@
+*{
+    font-family: TommyRegular;
+    font-size: 20px;
+}
+
+.players{
+    position: absolute;
+    left: 0;
+    top: 10%;
+}
+
+.fichas{
+    display: grid;
+    grid-template-columns: repeat(5, 7fr);
+    margin: 2px 2px 2px 2px;
+}
+
+.imgficha{
+    width: 90px;
+    height: 90px;
+    margin: 2px 2px 2px 2px;
+    border: 1px solid white;
+}
+
+.imgficha:hover{
+    opacity: 0.5;
+}
+
+
+
+.title{
+    font-family: TommyBold;
+    font-size: 24px;
+}
+
+.btn-azul{
+    background-color: #58B9BC !important;
+    border-radius: 55px !important;
+    width: 140px !important;
+    color: white;
+}
+
+.rosa{
+    color: #F50087;
+}
+.naranja{
+    color: #ff8000;
+}
+.verde{
+    color: #80D447;
+}
+.amarillo{
+    color: #FFD940;
+}
+.azul{
+    color: #58B9BC;
+}
+
+
+@font-face {
+    font-family: Mexicana;
+    src: url(src\fuentes\AmbystomaMexicanum.otf);
+  }
+
+  @font-face {
+    font-family: TommyBold;
+    src: url(src\fuentes\TommyBold.otf);
+  }
+
+  @font-face {
+    font-family: TommyLight;
+    src: url(src\fuentes\TommyLight.otf);
+  }
+
+  @font-face {
+    font-family: TommyRegular;
+    src: url(src\fuentes\TomyRegular.otf);
+  }

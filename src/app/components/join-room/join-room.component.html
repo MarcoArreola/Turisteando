@@ -1,0 +1,38 @@
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="title azul" id="staticBackdropLabel">Sala de juego</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body" *ngIf="room != undefined">
+
+        <div class="mb-3" *ngIf="room.private == true">
+          <label class="form-label">Clave de sala: </label>
+          <input type="text" class="form-control" id="password">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Nickname: </label>
+          <input type="text" class="form-control" id="name" [(ngModel)]="player.name" >
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Selecciona tu ficha: </label>
+        </div>
+
+        <div class="fichas">
+          <img class="imgficha"  id="{{item.id}}" src="{{item.image}}" *ngFor="let item of peonList" (click)="selectPeon(item.id.toString(), item.color.toString())">
+        </div>
+  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-azul" (click)="addPlayer()" >Unirse</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+

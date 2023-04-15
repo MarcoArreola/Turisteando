@@ -1,0 +1,21 @@
+<html>
+  <div *ngFor="let player of players" id={{player.id}} class="ficha" #box>
+    <img class="imgficha" src="../assets/FICHAS/{{player.img}}.png">
+  </div>  
+  <div class="main">
+    <div class="card mb-3" [ngStyle]="{'border-color': player.color}"  style="max-width: 300px; border: 2.5px solid" *ngFor="let player of players">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="../assets/FICHAS/{{player.img}}.png" class="img-fluid rounded-start" alt="..." >
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{player.name}}</h5>
+            <p class="card-text">${{player.money}}</p>
+            <p class="card-text"><small class="text-muted">{{player.jail}}</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</html>
